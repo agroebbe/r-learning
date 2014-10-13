@@ -1,0 +1,127 @@
+WEB
+---
+- data analysis techniques: http://www.r-tutor.com/
+- r refcard
+- http://www.statmethods.net/
+- http://www.cookbook-r.com/Manipulating_data/Comparing_vectors_or_factors_with_NA/
+
+- info on stats: http://rtutorialseries.blogspot.be/2012/03/r-tutorial-series-centering-variables.html
+
+- Rstudio: console: https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts
+
+
+
+OPEN QUESTIONS
+--------------
+- see what plot & ggplot2 can do...
+- working with questions
+- def functions
+- histogram 2 var from input data set and then get prob(X|Y) and plot
+- usable datasets in R
+- standard dev why n-1 ?? relearn
+
+- apply(function, rowsOrCols)
+- order function for sorting
+
+
+LEARNING
+--------
+TODO: aggregate(x,by=ls(y),FUN="mean")
+
+* timesieries (monthly data): 
+ z <- ts(matrix(rnorm(300), 100, 3), start = c(1961, 1), frequency = 12)
+
+* data to work on: library(help = "datasets")
+
+* as.numeric(...), as.character(...)
+* is.na(...)
+* x$n --> element of x named n --> x[["n"]]
+* rowSums(m), rowMeans(m), ...
+* colSums(m), colMeans(), ...
+
+* rbind & cbind --> combine row of col into matrix
+
+* select elements of a vector: v[c(F,T,F)]
+* so also reason why d[names(d)=="a"] works
+
+* date1=strptime( c("20100225230000", "20100226010000"), format="%Y%m%d%H%M%S", tz="CET")
+* remove NA's: max(c(1,2,NA), na.rm=TRUE)
+
+* write.table & read.table
+
+* plyr --> need R v 3.1.1
+install R packages
+install codetools
+install plyr
+
+* library(plyr)
+  df = rename(df,c("oldName"="newName"))
+  OR
+  names(df)[names(df)="oldName"] = newName
+
+* install new R dependencies in ubuntu: http://cran.rstudio.com/bin/linux/ubuntu/
+
+* pairs(df) --> scatterplot matrix
+
+* functions work on objects, make frame objects and then apply mean: mean( data.frame(x,y) )
+
+* par()
+
+*points(t$c, pch=20, cex=4,col=rgb(0,0,1,0.3))
+--- pch = plot symbol
+--- cex = factor to scale (e.g. x 4)
+
+* plot(t$a, type="l", ylim=range(t),lwd=3, col=rgb(1,0,0,0.3))
+--- lwd = line width
+* points(t$c, pch=20, cex=4,col=rgb(0,0,1,0.3))
+* lines(t$b, type="s", lwd=4,col=rgb(0.3,0.4,0.3,0.9))
+
+* plot(rnorm(100), type="l", col="gold")
+
+* L = list(one=1, two=c(1,2), five=seq(0,1,length=5))
+  names(L)
+
+* plot(x <- sort(rnorm(47)), type = "s", main = "plot(x, type = \"s\")")
+--- makes a plot
+* points(x, cex = .5, col = "dark red")
+--- makes a point plot
+
+* t = data.frame(x = c(11,12,14), y = c(19,20,21), z = c(10,9,7))
+
+* adding data to a frame
+df1 <- data.frame(a = factor(c('x','x','x','y','y','y', NA, NA, NA)),
+                  b = factor(c('x','y', NA,'x','y', NA,'x','y', NA)))
+data.frame(df1, isSame = someFUNChere(df1$a, df1$b))
+
+* v = seq(from=0, to=1, by=0.25)
+* mat=matrix(data=c(9,2,3,4,5,6),ncol=3)
+* rnorm, runif
+* help.search("random")
+
+* ctrl+enter : run line or selection in console
+* working dir (getwd(),setwd(name)): file IO & figure IO
+* concatenate: v=c(1,2,3)
+
+
+* tab completion
+* sum
+* mean
+* sample
+
+* rnorm(n=10, mean=1.2, sd=3.4)
+--- 10 samples from a normal distribution
+* help(rnorm) --> see the defaults
+
+* seq(1,10,1) === 1:10
+* seq.int(1,10,1) === 1:10
+
+* example(rnorm)
+* curve
+* mtext
+
+* help.start()
+
+* source("something.R")
+
+
+

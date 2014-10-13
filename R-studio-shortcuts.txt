@@ -1,0 +1,7 @@
+RStudio:
+--------
+Ctrl+2 : go to console
+Ctrl+L : clear console
+Esc : stop command
+
+
