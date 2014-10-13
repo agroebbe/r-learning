@@ -13,6 +13,13 @@ WEB
 
 OPEN QUESTIONS
 --------------
+- learn to understand:
+library(doBy)
+summaryBy(mpg + wt ~ cyl + vs, data = mtcars, 
+   FUN = function(x) { c(m = mean(x), s = sd(x)) } )
+# produces mpg.m wt.m mpg.s wt.s for each 
+# combination of the levels of cyl and vs
+
 - see what plot & ggplot2 can do...
 - working with questions
 - def functions
@@ -26,7 +33,13 @@ OPEN QUESTIONS
 
 LEARNING
 --------
-TODO: aggregate(x,by=ls(y),FUN="mean")
+* library(zoo) na.approx --> interpolation
+* library(zoo) rollmean --> moving average
+* cumsum
+* paste = concat, substr
+* aggregate(x,by=list(some-values-here),FUN="mean")
+
+* example DATA info: library(help = datasets)
 
 * timesieries (monthly data): 
  z <- ts(matrix(rnorm(300), 100, 3), start = c(1961, 1), frequency = 12)
