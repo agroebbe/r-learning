@@ -1,6 +1,7 @@
 
 .R*  # R maintenance file
-
+.RData
+.Rhistory
 
 # OS generated files #
 ######################

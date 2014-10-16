@@ -1,3 +1,7 @@
+
+.R*  # R maintenance file
+
+
 # OS generated files #
 ######################
 .DS_Store
