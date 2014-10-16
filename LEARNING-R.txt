@@ -13,6 +13,8 @@ WEB
 
 OPEN QUESTIONS
 --------------
+* factors
+
 - learn to understand:
 library(doBy)
 summaryBy(mpg + wt ~ cyl + vs, data = mtcars, 
@@ -30,43 +32,57 @@ summaryBy(mpg + wt ~ cyl + vs, data = mtcars,
 - apply(function, rowsOrCols)
 - order function for sorting
 
-R-HARD
-------
-* use <- or -> for assignment
-* ls() lists variables but not those with a dot
-* $ is a bit like the . in Java
-* x[-n] returns a copy of x with the nth element removed
-* x[1]
-* x[(2,3)]
-* x[0] does nothing !
-* x[(FALSE,TRUE,TRUE)] --> to take elements
-* assignment to selection vector:
-x[x > 3] <- 7 turns (3, 1, 4, 1, 5, 9) into (3, 1, 7, 1, 7, 7)
-x[x > 3] <- c(10, 11, 12) would produce (3, 1, 10, 1, 11, 12)
-* seq(a,b,n) a<= & <=b & steps of size n so a, a+n,...
-* a:b = seq(a,b,1)
-* seq(a,b,length=n) --> seq(a,b,(b-a)/(n-1))
-* convert TO: as.integer(), as.character()
-* someList[[1]] or someList$nameOfFirstOne
-** (list extends -> insert NULL values)
-** list get only when exists
-* arrray(vector, dim) --> fills column-wise
-* array(vector, dim, by.row=TRUE) --> fills row-wise
-* NaN & NA
-* need to handle NA's
-* is.nan & is.na (!! is.na gives true for NaN and for NA !!)
-* a function returns the value of its last line
-* f <- function(a,b=10) { ... } for default values
-* f <- function(a,b=max(a), ...) --> so more sophisticaded default values possible
-* call with named arguments
-* pass by value, best is to return a list as output
-* complex numbers e.g. 0+1i
-
-
-
-
 LEARNING
 --------
+* .. 
+
+* string maniplation (repeating): 
+paste(paste0("x",1:5), collapse= "+")
+gives "x1+x2+x3+x4+x5"
+
+* R is sometimes hard: info:
+    * use <- or -> for assignment
+    * ls() lists variables but not those with a dot
+    * $ is a bit like the . in Java
+    * x[-n] returns a copy of x with the nth element removed
+    * x[1]
+    * x[(2,3)]
+    * x[0] does nothing !
+    * x[(FALSE,TRUE,TRUE)] --> to take elements
+    * assignment to selection vector:
+    x[x > 3] <- 7 turns (3, 1, 4, 1, 5, 9) into (3, 1, 7, 1, 7, 7)
+    x[x > 3] <- c(10, 11, 12) would produce (3, 1, 10, 1, 11, 12)
+    * seq(a,b,n) a<= & <=b & steps of size n so a, a+n,...
+    * a:b = seq(a,b,1)
+    * seq(a,b,length=n) --> seq(a,b,(b-a)/(n-1))
+    * convert TO: as.integer(), as.character()
+    * someList[[1]] or someList$nameOfFirstOne
+    ** (list extends -> insert NULL values)
+    ** list get only when exists
+    * arrray(vector, dim) --> fills column-wise
+    * array(vector, dim, by.row=TRUE) --> fills row-wise
+    * NaN & NA
+    * need to handle NA's
+    * is.nan & is.na (!! is.na gives true for NaN and for NA !!)
+    * a function returns the value of its last line
+    * f <- function(a,b=10) { ... } for default values
+    * f <- function(a,b=max(a), ...) --> so more sophisticaded default values possible
+    * call with named arguments
+    * pass by value, best is to return a list as output
+    * complex numbers e.g. 0+1i
+
+* see som code:
+getS3method(’median’, ’default’)
+
+* row binding 2 dataframes to extend them: df <- rbind(df,data.frame(a=sample(letters,1), b=runif(1)))
+
+* dev.new() --> new plotting window
+* sort(...) is by value, so returned thing is the sorted one
+* d = density (PDF)
+* p = prob (CDF)
+* q = quantile (CDF-1)
+* r = random sample from it
+
 * sessionInfo()
 
 * plot, legend, axis, mtext, grid, 

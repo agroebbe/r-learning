@@ -1,0 +1,4 @@
+summary: count per value
+table: make a pivot per value
+
+*** chi-squared test to see if two variables are independent (with a certain confidence)
