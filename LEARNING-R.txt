@@ -1,5 +1,7 @@
 WEB
 ---
+- VERY GOOD: http://ww2.coastal.edu/kingw/statistics/R-tutorials/index.html
+
 - data analysis techniques: http://www.r-tutor.com/
 - r refcard
 - http://www.statmethods.net/
@@ -34,7 +36,27 @@ summaryBy(mpg + wt ~ cyl + vs, data = mtcars,
 
 LEARNING
 --------
-* .. 
+* remove working data:
+    rm(list = ls())
+* dimnames(data) --> and then dim nr can be used!
+* tapply(states$Life.Exp, states$region, mean)
+--> tapply(data, index, function)
+
+* see some frequency per interval:
+as.data.frame(table(cut(faithful$waiting,breaks=3)))
+
+* nice table printout:
+as.data.frame(lapply(someDataFrame,someFunOnCol))
+
+* !! resume data table with key # freq combinations --> as.data.frame(ftable(ucb))
+
+* ftable(ucb) --> make a flat pivot table
+* addmargins(gen.adm.table)
+-- add sums to a table
+
+* every Nth record of a dataframe (e.g. ucb)
+ucb[seq(1,length(ucb[,1]),400),]
+
 
 * string maniplation (repeating): 
 paste(paste0("x",1:5), collapse= "+")

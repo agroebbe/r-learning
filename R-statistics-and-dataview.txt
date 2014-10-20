@@ -2,3 +2,8 @@ summary: count per value
 table: make a pivot per value
 
 *** chi-squared test to see if two variables are independent (with a certain confidence)
+--- note works categorical variables and certain circumstances 
+(see http://stattrek.com/chi-square-test/independence.aspx)
+--- chisq = X² value
+--- df = degrees of freedom
+--- p-value = prob(x²>chisq)
