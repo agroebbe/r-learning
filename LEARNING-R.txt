@@ -34,8 +34,44 @@ summaryBy(mpg + wt ~ cyl + vs, data = mtcars,
 - apply(function, rowsOrCols)
 - order function for sorting
 
+- aggregate how to name data column
+- ggplot --> learn
+---- also see: http://davetang.org/muse/2013/05/22/using-aggregate-and-apply-in-r/
+
+
+
 LEARNING
 --------
+* unlist(lapply(someData,mean))
+
+* data exploration
+unique(someCol)
+
+* select columns in a dataset:
+--> use a boolean selection on the column names
+newdata <- mydata[!(names(mydata) %in% c("v1", "v2", "v3") )]
+
+* select data rows by giving the indices (which):
+newdata <- mydata[ which(mydata$gender=='F' & mydata$age > 65), ]
+note: also attach & detach can be used !
+
+* select data rows and columns:
+newdata <- subset(mydata, age >= 20 | age < 10, select=c(ID, Weight))
+note: select=weight:income --> would give a range of columns
+
+* JOIN: 
+total <- merge(data frameA,data frameB,by=c("ID","Country"))
+
+* setting data:
+mydata$v1[mydata$v1==99] <- NA
+
+* mydata[!complete.cases(mydata),] helps to view data with NA's 
+(note '' is not an NA !!!)
+
+* in R-studio --> View(someDataFrame) --> table view
+*** also: View(a[5,])
+
+
 * remove working data:
     rm(list = ls())
 * dimnames(data) --> and then dim nr can be used!
@@ -151,7 +187,7 @@ install plyr
 * library(plyr)
   df = rename(df,c("oldName"="newName"))
   OR
-  names(df)[names(df)="oldName"] = newName
+  names(df)[names(df)=="oldName"] = newName
 
 * install new R dependencies in ubuntu: http://cran.rstudio.com/bin/linux/ubuntu/
 
