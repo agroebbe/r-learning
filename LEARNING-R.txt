@@ -15,7 +15,11 @@ WEB
 
 OPEN QUESTIONS
 --------------
-* factors
+* data.frame vs data.table --> extra package: http://cran.r-project.org/web/packages/data.table/index.html
+
+
+* split / unlist / 
+* method to read  !!! : aggregate.data.frame
 
 - learn to understand:
 library(doBy)
@@ -42,6 +46,33 @@ summaryBy(mpg + wt ~ cyl + vs, data = mtcars,
 
 LEARNING
 --------
+* bar() plot gives back the centres of the bars !
+
+* plot and label points (x,y):
+  attach(mtcars)
+  plot(wt, mpg, main="Milage vs. Car Weight", xlab="Weight", ylab="Mileage", pch=18, col="blue")
+  text(wt, mpg, row.names(mtcars), cex=0.6, pos=4, col="red")
+
+* package gdata (excel, trim function, ...)
+
+* #sort by mpg (ascending) and cyl (descending)
+newdata <- mtcars[order(mpg, -cyl),] # note the , !!!
+
+* everyday = seq(from=as.Date('2005-1-1'),to=as.Date('2005-12-31'),by='day')
+
+
+* factors in R: http://www.stat.berkeley.edu/~s133/factors.html
+
+* note: indexing a vector with an index-vector with more elements will produce the larger vector by looking up the indices
+example: c(1,2,3)[c(1,2,3,1,2,3)] or for factors levels(f)[f]
+
+!!! * read.table will automatically convert character variables to factors unless the as.is= argument is specified
+
+!! * view #occurences of values of A in interval range and different values of B: (note: 'cut' maps value to an interval)
+  with(airquality, table(cut(Temp, quantile(Temp)), Month))
+
+* grepl("a","abcd") return TRUE or FALSE according to match
+* search for help with '?', for example: ?regex
 * unlist(lapply(someData,mean))
 
 * data exploration
@@ -84,7 +115,8 @@ as.data.frame(table(cut(faithful$waiting,breaks=3)))
 * nice table printout:
 as.data.frame(lapply(someDataFrame,someFunOnCol))
 
-* !! resume data table with key # freq combinations --> as.data.frame(ftable(ucb))
+* !! resume data table with key # freq combinations 
+--> as.data.frame(ftable(ucb))
 
 * ftable(ucb) --> make a flat pivot table
 * addmargins(gen.adm.table)
@@ -93,6 +125,8 @@ as.data.frame(lapply(someDataFrame,someFunOnCol))
 * every Nth record of a dataframe (e.g. ucb)
 ucb[seq(1,length(ucb[,1]),400),]
 
+* info on tables: 
+http://www.cyclismo.org/tutorial/R/tables.html
 
 * string maniplation (repeating): 
 paste(paste0("x",1:5), collapse= "+")
