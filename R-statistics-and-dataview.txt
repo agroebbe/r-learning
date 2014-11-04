@@ -7,3 +7,17 @@ table: make a pivot per value
 --- chisq = X² value
 --- df = degrees of freedom
 --- p-value = prob(x²>chisq)
+
+*** interpreting regression values:
+http://dss.princeton.edu/online_help/analysis/interpreting_regression.htm
+
+
+
+*** regresssion: null hypo = coeff is null
+The null (default) hypothesis is always that each independent variable is having absolutely no effect (has a coefficient of 0) and you are looking for a reason to reject this theory.
+
+**** so small p-value (small chance on such an extreme t value) means reject null hypothesis and so accept correlation
+
+
+****
+Another number to be aware of is the P value for the regression as a whole. Because your independent variables may be correlated, a condition known as multicollinearity, the coefficients on individual variables may be insignificant when the regression as a whole is significant. Intuitively, this is because highly correlated independent variables are explaining the same part of the variation in the dependent variable, so their explanatory power and the significance of their coefficients is "divided up" between them.

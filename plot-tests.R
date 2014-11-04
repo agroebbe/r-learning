@@ -29,3 +29,8 @@ mtext("y=1/x", side=4, line=3, cex.lab=1,las=2, col="blue")
 # add a main title and bottom and left axis labels 
 title("An Example of Creative Axes", xlab="X values",
       ylab="Y=X")
+
+
+z <- rbind(log2(1:10), sqrt(1:10), (1:10)/3) # data matrix 
+barX <- barplot(z, beside=TRUE) 
+text(cex=.5, x=barX, y=z+par("cxy")[2]/2, round(z,2), xpd=TRUE) 
