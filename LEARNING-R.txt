@@ -11,6 +11,8 @@ LINKS
 
 - Rstudio: console: https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts
 
+- FINDING SAMPLE DATASETS: 
+http://stat.ethz.ch/R-manual/R-patched/library/datasets/html/00Index.html
 
 
 OPEN QUESTIONS
