@@ -1,3 +1,32 @@
+TODO INVESTIGATE FURTHER
+========================
+*** regression
++ http://www.psychstat.missouristate.edu/multibook/mlt07.htm
+
++ http://www.r-tutor.com/elementary-statistics/simple-linear-regression/significance-test-linear-regression
+
++ http://www.r-bloggers.com/logistic-regression-factors-in-r/
+
++ logistic regression:
+http://www.r-tutor.com/elementary-statistics/logistic-regression/significance-test-logistic-regression
+
+
+LINKS
+=====
+
+* GLM
+!!
+http://data.princeton.edu/R/glms.html
+
+also model selection
+
+* regression with product of variables (means that var A influence impact of var B):
+http://data.princeton.edu/wws509/notes/c2s5.html
+
+
+* SVM (support vector machines): 
+*** http://en.wikibooks.org/wiki/Data_Mining_Algorithms_In_R/Classification/SVM
+
 summary: count per value
 table: make a pivot per value
 

@@ -41,4 +41,4 @@ load data local infile '~/host/data/contact-csv-2014-10-20.csv'
  ignore 1 lines;
 
 -- counter;name;first_name;last_name;email;title;grade;bureau;building;bus_tel;mob_tel;company;division;departement;domain;team;x400;perid;language;manager;manager_perid;distribution_lists
--- 2;[COP - SIO] Synergy;;;id813842m00@belgacom.be;;;;;;;;;;;;/o=BelgacomGroup/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=id813842m00aef;id813842m00;;LAMRABTI Ahmed (CUO/CFF);id813842;[]
+-- 2;[PPP - SSS] Synergy;;;id813842m00@somewhere.be;;;;;;;;;;;;/o=SOME/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=iDm00aef;id1230;;L EN A);id123;[]

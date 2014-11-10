@@ -1,5 +1,5 @@
-WEB
----
+LINKS
+------
 - VERY GOOD: http://ww2.coastal.edu/kingw/statistics/R-tutorials/index.html
 
 - data analysis techniques: http://www.r-tutor.com/
@@ -46,6 +46,31 @@ summaryBy(mpg + wt ~ cyl + vs, data = mtcars,
 
 LEARNING
 --------
+* ...
+
+* make a test set and a data set
+  index <- 1:nrow(cats)
+  testindex <- sample(index, trunc(length(index)/3))
+  testset <- cats[testindex,]
+  trainset <- cats[-testindex,] # removes the rows indicates by the testindex numbers
+
+* join:
+- data table --> use keys for performance
+- sqldf
+- plyr & dplyr
+- data frame subscripts: df1[,"NewDataCol"]<-df2[df1[ ,"Key"], "NewDataCol"]
+
+* 
+Especially if you're also interested in data manipulation in general (including sorting, filtering, subsetting, summarizing etc.), you should definitely take a look at dplyr, which comes with a variety of functions all designed to facilitate your work specifically with data frames and certain other database types. It even offers quite an elaborate SQL interface, and even a function to convert (most) SQL code directly into R.
+
+*
+Inner join: merge(x = df1, y = df2, by = "CustomerId")
+Full Outer join: merge(x = df1, y = df2, by = "CustomerId", all = TRUE)
+Left outer: merge(x = df1, y = df2, by = "CustomerId", all.x=TRUE)
+Right outer: merge(x = df1, y = df2, by = "CustomerId", all.y=TRUE)
+Cross join: merge(x = df1, y = df2, by = NULL)
+-- params: by, by.x, by.y, all.x, all.y,...
+
 * bar() plot gives back the centres of the bars !
 
 * plot and label points (x,y):
