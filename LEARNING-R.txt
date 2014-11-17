@@ -50,6 +50,15 @@ LEARNING
 --------
 * ...
 
+* transform some values in factors for lattice plots:
+  library(lattice) 
+  attach(mtcars)
+  gear.f<-factor(gear,levels=c(3,4,5),labels=c("3gears","4gears","5gears")) 
+  cyl.f <-factor(cyl,levels=c(4,6,8),labels=c("4cyl","6cyl","8cyl")) 
+  # boxplots for each combination of two factors 
+  bwplot(cyl.f~mpg|gear.f, ylab="Cylinders", xlab="Miles per Gallon", main   ="Mileage by Cylinders and Gears", layout=c(1,3))
+  # note that in the formula of vectors: corresponding elements are by index
+
 * make a test set and a data set
   index <- 1:nrow(cats)
   testindex <- sample(index, trunc(length(index)/3))
