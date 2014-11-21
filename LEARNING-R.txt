@@ -48,7 +48,22 @@ summaryBy(mpg + wt ~ cyl + vs, data = mtcars,
 
 LEARNING
 --------
-* ...
+* in a list d of dataframes, select the first 'list' in every data frame: 
+ lapply(d,"[[",1)
+
+* make a list of functions (named) and then to run and time them:
+lapply(list_of_function, function(f) system.time(f(x)))
+# http://adv-r.had.co.nz/Functional-programming.html#anonymous-functions
+---- apply these functions with some defaults: 
+lapply(funs, function(f) f(x, na.rm = TRUE))
+
+
+* unlist to apply functions to things and to flatten out:
+words_vector<-unlist(strsplit(unlist(map.values)," "))
+
+* lapply & sapply difference (sapply simplifies to vector when return value is a simple value)
+see: https://www.inkling.com/read/r-cookbook-paul-teetor-1st/chapter-6/recipe-6-2
+*** also see: http://adv-r.had.co.nz/Functional-programming.html
 
 * testing library: http://journal.r-project.org/archive/2011-1/RJournal_2011-1_Wickham.pdf
 
