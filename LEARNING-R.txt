@@ -44,10 +44,23 @@ summaryBy(mpg + wt ~ cyl + vs, data = mtcars,
 - ggplot --> learn
 ---- also see: http://davetang.org/muse/2013/05/22/using-aggregate-and-apply-in-r/
 
+RHADOOP LEARNING
+----------------
+* READ about debugging, etc.
+** http://grokbase.com/t/gg/rhadoop/12bpahxb34/396-toy-example-from-airplane-data-tutorial-throwing-errors
+
+* RMR2 example: https://github.com/RevolutionAnalytics/rmr2/blob/master/pkg/tests/wordcount.R
+
+* # NOTE: when hadoop streaming failed with error code 5  --> file not found or permission problem
+
+
 
 
 LEARNING
 --------
+* find things in the system environment: 
+Sys.getenv()[grep("hadoop",Sys.getenv())]
+
 * in a list d of dataframes, select the first 'list' in every data frame: 
  lapply(d,"[[",1)
 
