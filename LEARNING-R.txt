@@ -58,6 +58,14 @@ RHADOOP LEARNING
 
 LEARNING
 --------
+* 
+install.packages("data.table")
+library(data.table)
+contacts_dt <- data.table(contacts)
+tables() # see overview of data.tables and memory consumption
+contacts_dt[grepl("bauve serge",name,ignore.case = T),.(name,perid,manager)]
+
+
 * find things in the system environment: 
 Sys.getenv()[grep("hadoop",Sys.getenv())]
 
